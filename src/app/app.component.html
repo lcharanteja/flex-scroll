@@ -1,9 +1,31 @@
-<div fxLayout="row" fxFlex="100" class="container">
-	<div fxLayout="column" fxFlex="50">
+<div fxLayout="column" class="top">
+    Top
+</div>
+<mat-divider></mat-divider>
+<div fxLayout="row">
+	<div fxLayout="column" fxFlex="50" class="flex-p dashboard-half">
     1.Column
+    <mat-tab-group [selectedIndex]="0">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="ml-sm-1 lift">To Do</span>
+        </ng-template>
+        <ng-template matTabContent>
+          <app-todo></app-todo>
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="ml-sm-1 lift">Calendar</span>
+        </ng-template>
+        <ng-template matTabContent>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
 	</div>
-  <mat-divider [vertical]="true"></mat-divider>
+  <mat-divider [vertical]="true" class="flex-p dashboard-half"></mat-divider>
 	<div fxLayout="column" fxFlex="50">
-    2.COlumn
+    2.Column
 	</div>
 </div>

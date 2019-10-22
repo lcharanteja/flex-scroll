@@ -1,0 +1,35 @@
+<p>
+	todo works!
+</p>
+<mat-divider></mat-divider>
+<div fxLayout="column">
+	<!-- Tasks Chart -->
+	<div fxLayout="column" class="box-1">
+		<div fxLayoutAlign="center center">
+			<h5>Todo Tasks</h5>
+		</div>
+		<div class="w-100 h-225p">
+
+		</div>
+		<div fxFlex="100" fxLayoutAlign="center center">
+
+		</div>
+		<div fxFlex="100" fxLayoutAlign="end center">
+		</div>
+	</div>
+
+	<mat-divider></mat-divider>
+
+	<!-- Tasks list grouped -->
+	<div fxLayout="column">
+		<mat-selection-list #items>
+			<mat-list-option *ngFor="let thing of things">
+				{{thing}}
+			</mat-list-option>
+		</mat-selection-list>
+
+		<p>
+			Options selected: {{items.selectedOptions.selected.length}}
+		</p>
+	</div>
+</div>
